@@ -1,0 +1,32 @@
+html
+    head
+        title Users
+        script 
+            include ../client.js
+    body 
+        div#main
+        li
+            a(href="/") Home
+        li
+            a(href="/users") Users
+        li
+            a(href="/orderFood") Order Food
+        p Hello, #{name}
+        li
+            a(href=`/users/${id}`) View your profile 
+        li 
+            a(href="/logout") Logout
+        br
+        h1 Profile for #{name}
+        p Private Mode:
+        input(type="radio" id="on" name="privacy" value="1")
+        label(for="on") On
+        br
+        input(type="radio" id="off" name="privacy" value="0")
+        label(for="off") Off
+        br
+        button(type="button" onclick="changePrivacy()") Save
+        h2 Order history:
+        each key in orders 
+            a(href=`/orders/${key}`) #{key}
+            br

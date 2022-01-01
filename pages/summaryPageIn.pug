@@ -1,0 +1,27 @@
+html
+    head
+        title Homepage
+    body 
+        div#main
+        li
+            a(href="/") Home
+        li
+            a(href="/users") Users
+        li
+            a(href="/orderFood") Order Food
+        p Hello, #{name}
+        li
+            a(href=`/users/${id}`) View your profile 
+        li 
+            a(href="/logout") Logout
+        br
+        h2 Order:
+        p Name: #{orderName}
+        p Restaurant Name: #{restaurantName}
+        p Subtotal: #{subtotal}
+        p Tax: #{tax}
+        p Delivery Fee: #{deliveryFee}
+        p Total: #{total}
+        h4 Ordered Items:
+        each key, val in items
+            li #{key.name} - Qty: #{key.quantity}

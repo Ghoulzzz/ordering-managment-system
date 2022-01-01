@@ -1,0 +1,41 @@
+html
+  head
+    title Order Form
+    style.
+      .column {
+      float: left;
+      }
+      
+      .left{
+      width: 10%;
+      }
+      
+      .right {
+      width: 25%;
+      }
+      
+      .middle {
+      width: 65%;
+      }
+  body(onload='init()')
+    li
+      a(href="/") Home
+    li
+      a(href="/users") Users
+    li
+      a(href="/orderFood") Order Food
+    p Hello, #{name}
+    li
+      a(href=`/users/${id}`) View your profile 
+    li 
+      a(href="/logout") Logout
+    br
+    select#restaurant-select
+    br
+    br
+    #info
+    #main
+      #left.column.left
+      #middle.column.middle
+      #right.column.right
+    script(src='./orderform.js')

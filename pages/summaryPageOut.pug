@@ -1,0 +1,30 @@
+html
+    head
+        title Homepage
+        script 
+            include ../client.js
+    body 
+        div#main
+        li
+            a(href="/") Home
+        li
+            a(href="/users") Users
+        li
+            a(href="/register") Register
+        br
+        label(for="username") Username: 
+        input(type="text" id="username" name="username")
+        label(for="password")  Password:  
+        input(type="password" id="password" name="password")
+        button(type="button" onclick="loginCheck()") Login
+        br
+        h2 Order:
+        p Name: #{orderName}
+        p Restaurant Name: #{restaurantName}
+        p Subtotal: #{subtotal}
+        p Tax: #{tax}
+        p Delivery Fee: #{deliveryFee}
+        p Total: #{total}
+        h4 Ordered Items: 
+        each key, val in items
+            li #{key.name} - Qty: #{key.quantity}

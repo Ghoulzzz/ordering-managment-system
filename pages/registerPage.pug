@@ -1,0 +1,28 @@
+html
+    head
+        title Register Page
+        script 
+            include ../client.js
+    body 
+        div#main
+        li
+            a(href="/") Home
+        li
+            a(href="/users") Users
+        li
+            a(href="/register") Register
+        br
+        label(for="username") Username: 
+        input(type="text" id="username" name="username")
+        label(for="password")  Password:  
+        input(type="password" id="password" name="password")
+        button(type="button" onclick="loginCheck()") Login
+        br
+        br
+        label(for="username2") Username: 
+        input(type="text" id="username2" name="username2")
+        br
+        label(for="password2")  Password:  
+        input(type="password" id="password2" name="password2")
+        br
+        button(type="button" onclick="registerCheck()") Register

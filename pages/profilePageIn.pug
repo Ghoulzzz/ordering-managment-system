@@ -1,0 +1,22 @@
+html
+    head
+        title Users
+    body 
+        div#main
+        li
+            a(href="/") Home
+        li
+            a(href="/users") Users
+        li
+            a(href="/orderFood") Order Food
+        p Hello, #{name}
+        li
+            a(href=`/users/${id}`) View your profile 
+        li 
+            a(href="/logout") Logout
+        br
+        h1 Profile for #{profilename} 
+        h2 Order history:
+        each key in orders 
+            a(href=`/orders/${key}`) #{key}
+            br
